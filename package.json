@@ -1,21 +1,49 @@
 {
-  "name": "vscode-erlang-interpolate",
-  "displayName": "vscode_erlang_interpolate",
-  "description": "",
+  "name": "erlang-interpolate",
+  "displayName": "Erlang Interpolate",
+  "description": "Syntax highlighter to the Erlang Interpolate lib.",
   "version": "0.0.1",
+  "author": {
+    "name": "William Fank Thomé",
+    "url": "https://github.com/williamthome/"
+  },
+  "funding": [
+    "https://github.com/sponsors/williamthome",
+    "https://www.buymeacoffee.com/williamthome"
+  ],
+  "publisher": "williamthome",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/williamthome/vscode-erlang-interpolate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/williamthome/vscode-erlang-interpolate"
+  },
+  "bugs": {
+    "url": "https://github.com/williamthome/vscode-erlang-interpolate/issues"
+  },
+  "keywords": [
+    "interpolate",
+    "interpolation",
+    "erlang",
+    "erl",
+    "highlight"
+  ],
   "engines": {
     "vscode": "^1.82.0"
   },
   "categories": [
-    "Other"
+    "Programming Languages"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
+    "grammars": [
       {
-        "command": "vscode-erlang-interpolate.helloWorld",
-        "title": "Hello World"
+        "scopeName": "erlang-interpolate.injection",
+        "path": "./syntaxes/interpolate.tmLanguage.json",
+        "injectTo": [
+          "source.erlang"
+        ]
       }
     ]
   },

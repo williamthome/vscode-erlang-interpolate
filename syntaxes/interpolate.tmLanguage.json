@@ -1,0 +1,36 @@
+{
+	"scopeName": "erlang-interpolate.injection",
+	"injectionSelector": "L:string.quoted.double.erlang",
+	"patterns": [
+		{
+			"include": "#erlang-interpolate"
+		}
+	],
+	"repository": {
+		"erlang-interpolate": {
+			"begin": "(\\~)([^\\s]*?)(\\[)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.definition.sigil.start.erlang"
+				},
+				"2": {
+					"name": "punctuation.definition.sigil.control-sequence.erlang"
+				},
+				"3": {
+					"name": "punctuation.definition.list.begin.erlang"
+				}
+			},
+			"end": "(\\])",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.definition.list.end.erlang"
+				}
+			},
+			"patterns": [
+				{
+					"include": "source.erlang"
+				}
+			]
+		}
+	}
+}
